@@ -34,7 +34,7 @@ function App() {
       >
         Fetch da books
       </button> */}
-      <div className="container relative mx-auto grid h-full gap-4 p-8 sm:grid-cols-2">
+      <div className="container relative mx-auto grid h-full gap-4 sm:grid-cols-2">
         {books.map((book, index) => (
           <BookCard book={book} index={index} key={index} />
         ))}
