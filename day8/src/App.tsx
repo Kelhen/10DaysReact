@@ -1,11 +1,19 @@
-function Card(props: { icon: string; label: string; number: number }) {
+function Card({
+  icon,
+  label,
+  number,
+}: {
+  icon: string;
+  label: string;
+  number: number;
+}) {
   return (
     <section className="flex-0 w-full flex-col rounded bg-white px-8 py-4 text-gray-800 shadow-lg">
       <p>
-        {props.icon} <span className="ml-2">{props.label}</span>
+        {icon} <span className="ml-2">{label}</span>
       </p>
       <p className="text-2xl font-bold sm:text-4xl lg:text-6xl">
-        {props.number.toLocaleString()}
+        {number.toLocaleString()}
       </p>
     </section>
   );
