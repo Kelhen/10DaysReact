@@ -1,12 +1,10 @@
-function Card({
-  icon,
-  label,
-  number,
-}: {
+interface ThingsType {
   icon: string;
   label: string;
   number: number;
-}) {
+}
+
+function Card({ icon, label, number }: ThingsType) {
   return (
     <section className="flex-0 w-full flex-col rounded bg-white px-8 py-4 text-gray-800 shadow-lg">
       <p>
@@ -20,7 +18,7 @@ function Card({
 }
 
 function App() {
-  const things = [
+  const things: ThingsType[] = [
     { icon: "🍎", label: "Apples", number: 5365476 },
     { icon: "🍌", label: "Bananas", number: 42 },
     { icon: "🍊", label: "Oranges", number: 200012 },
